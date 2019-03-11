@@ -1,4 +1,4 @@
-﻿# 智能盘点—钢筋数量AI识别(训练钢筋数据)
+# 智能盘点—钢筋数量AI识别(训练钢筋数据)
 
 ![图片标题](https://github.com/liuliu408/image/blob/master/image_notebook/s1.png)
 **数据路径均是用的软连接方式！**
@@ -168,13 +168,13 @@ qiang@qiang:~/detectron$ python tools/infer_simple.py \
    --wts ~/detectron/models/model_final.pkl \
    /home/qiang/detectron/detectron/datasets/data/gj/test_dataset
 ```
-![图片标题](https://leanote.com/api/file/getImage?fileId=5c78be7bab64410dee001ce2)
+![图片标题](https://github.com/liuliu408/image/blob/master/image_notebook/%E4%BF%AE%E6%94%B9%E6%A0%87%E7%AD%BE.png)
 ```
 #dummy_coco_dataset = dummy_datasets.get_coco_dataset() #coco数据classes
 #dummy_coco_dataset = dummy_datasets.get_voc_dataset() #voc数据classes
 dummy_coco_dataset = dummy_datasets.get_gj_dataset() #gj数据classes  
 ```
-![图片标题](https://leanote.com/api/file/getImage?fileId=5c78bea1ab64410dee001ceb)
+![图片标题](https://github.com/liuliu408/image/blob/master/image_notebook/%E8%BE%93%E5%87%BA%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8Fpdf%E6%94%B9%E4%B8%BAjpg.png)
 
 命令解释：
 ```
@@ -284,7 +284,7 @@ if __name__ == '__main__':
     json.dump(coco, open(json_file, 'w'))
  
 ```
-![图片标题](https://leanote.com/api/file/getImage?fileId=5c78c870ab64411022001ea9)
+![图片标题](https://github.com/liuliu408/image/blob/master/image_notebook/3image_2_json.py.png)
 
 ##7. test_net.py测试
 ```
@@ -343,7 +343,7 @@ Traceback (most recent call last):
     'No evaluator for dataset: {}'.format(dataset.name)
 NotImplementedError: No evaluator for dataset: gj_2019_test
 ```
-![图片标题](https://leanote.com/api/file/getImage?fileId=5c78f7d3ab64410dee0028b5)
+![图片标题](https://github.com/liuliu408/image/blob/master/image_notebook/%E8%BF%94%E5%9B%9E.png)
 最后可能会报错说缺少gj_2019_test，但其实是没有影响的，主要是因为我们前面生成的json文件中包含了category（类别）这个部分，因为我也尝试过json文件中不生成category，这时候运行测试命令则没有报错。
 通过下图我们也可以看到，报错的位置在task_evaluation.py。但是尽管报错了，我们所需要的检测结果detection.pkl还是会生成的。
 既然这样的话为什么还要生成catogory呢？因为我成生成detection.pkl后总需要可视化的呀，也要看看检测的结果噻。也就是需要运行tools/visualize_results.py，该文件需要json文件中catogary部分的支持。
@@ -390,11 +390,11 @@ index created!
 181/200
 191/200
 ```
-![图片标题](https://leanote.com/api/file/getImage?fileId=5c78f9f2ab64410dee002940)
+![图片标题](https://github.com/liuliu408/image/blob/master/image_notebook/%E5%8F%AF%E8%A7%86%E5%8C%96%E6%95%88%E6%9E%9C.png)
 
 **指定可视化输出格式为jpg**
 /home/qiang/detectron/detectron/utils/vis.py **参数默认是ext='pdf' 修改为 ext='jpg'**
-![图片标题](https://leanote.com/api/file/getImage?fileId=5c7cbdf5ab64414599005af4)
+![图片标题](https://github.com/liuliu408/image/blob/master/image_notebook/2019-03-04%2013-55-46%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png)
 
 **第2次训练开始时间：2019.03.02 12.19 48**
 
@@ -627,8 +627,4 @@ def vis_one_image(
     fig.savefig(os.path.join(output_dir, '{}'.format(output_name)), dpi=dpi)
     plt.close('all')
 ```
-
-
-
- 
 
