@@ -24,12 +24,10 @@ CUDA_VISIBLE_DEVICES='1' python tools/visualize_results.py \
 
 CUDA_VISIBLE_DEVICES='1' python tools/visualize_results.py  --dataset gj_2019_test --detections test/detections.pkl  --output-dir test
 ```
-
 ![图片标题](https://github.com/liuliu408/image/blob/master/image_notebook/A2.png)
-
 所在赛程：初赛 - A榜  状态/得分: 0.83610700000
 
-我们退出ssh之后程序继续在后台跑呢？screen帮助你实现梦想！！
+##我们退出ssh之后程序继续在后台跑呢？screen帮助你实现梦想！！
 ```
 1.shell窗口输入：screen
 2.运行后台程序
@@ -63,11 +61,10 @@ CUDA_VISIBLE_DEVICES='1,2,3' python tools/visualize_results.py \
  --output-dir test﻿
  
 ```
- ![图片标题](https://github.com/liuliu408/image/blob/master/image_notebook/A3.png)
- 
+ ![图片标题](https://github.com/liuliu408/image/blob/master/image_notebook/A3.png) 
  所在赛程：初赛 - A榜 状态/得分: 0.78247300000
  
-  用 retinanet_R-101-FPN_2x.yaml 配置训练出现问题：(梯度训练爆炸!!)
+##用 retinanet_R-101-FPN_2x.yaml 配置训练出现问题：(梯度训练爆炸!!)
 ```
 json_stats: {"eta": "2 days, 0:43:17", "fl_fpn3": "0.757426", "fl_fpn4": "0.261459", "fl_fpn5": "0.000389", "fl_fpn6": "0.000001", "fl_fpn7": "0.000000", "iter": 140, "loss": "1.237531", "lr": "0.005200", "mb_qsize": 0, "mem": 7084, "retnet_bg_num": "718639.625000", "retnet_fg_num": "8641.375000", "retnet_loss_bbox_fpn3": "0.130857", "retnet_loss_bbox_fpn4": "0.057250", "retnet_loss_bbox_fpn5": "0.000220", "retnet_loss_bbox_fpn6": "0.000000", "retnet_loss_bbox_fpn7": "0.000000", "time": "1.951894"}
 json_stats: {"eta": "2 days, 1:17:41", "fl_fpn3": "0.717649", "fl_fpn4": "0.293217", "fl_fpn5": "0.000620", "fl_fpn6": "0.000001", "fl_fpn7": "0.000000", "iter": 160, "loss": "1.178684", "lr": "0.005467", "mb_qsize": 0, "mem": 7084, "retnet_bg_num": "719637.000000", "retnet_fg_num": "8354.875000", "retnet_loss_bbox_fpn3": "0.105930", "retnet_loss_bbox_fpn4": "0.044704", "retnet_loss_bbox_fpn5": "0.000311", "retnet_loss_bbox_fpn6": "0.000000", "retnet_loss_bbox_fpn7": "0.000000", "time": "1.975307"}
