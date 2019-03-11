@@ -1,6 +1,6 @@
 ﻿# 智能盘点—钢筋数量AI识别(训练钢筋数据)
 
-![图片标题](https://github.com/liuliu408/image/blob/master/image_notebook/s1.png)
+![图片标题](https://github.com/liuliu408/image/blob/master/notebook/zt1_image1.png)
 **数据路径均是用的软连接方式！**
 请提前把数据准备好，以及将数据集标注文件格式修改为COCO json格式！
 本人是通过“ step_1C_voc_xml_json.py ” 代码实现的XML装COCO json格式
@@ -168,13 +168,13 @@ qiang@qiang:~/detectron$ python tools/infer_simple.py \
    --wts ~/detectron/models/model_final.pkl \
    /home/qiang/detectron/detectron/datasets/data/gj/test_dataset
 ```
-![图片标题](https://github.com/liuliu408/image/blob/master/notebook/zt1_image1.png)
+![图片标题](https://github.com/liuliu408/image/blob/master/notebook/zt1_image2.png)
 ```
 #dummy_coco_dataset = dummy_datasets.get_coco_dataset() #coco数据classes
 #dummy_coco_dataset = dummy_datasets.get_voc_dataset() #voc数据classes
 dummy_coco_dataset = dummy_datasets.get_gj_dataset() #gj数据classes  
 ```
-![图片标题](https://github.com/liuliu408/image/blob/master/notebook/zt1_image2.png)
+![图片标题](https://github.com/liuliu408/image/blob/master/notebook/zt1_image3.png)
 
 命令解释：
 ```
@@ -284,7 +284,7 @@ if __name__ == '__main__':
     json.dump(coco, open(json_file, 'w'))
  
 ```
-![图片标题](https://github.com/liuliu408/image/blob/master/notebook/zt1_image3.png)
+![图片标题](https://github.com/liuliu408/image/blob/master/notebook/zt1_image4.png)
 
 ##7. test_net.py测试
 ```
@@ -343,7 +343,7 @@ Traceback (most recent call last):
     'No evaluator for dataset: {}'.format(dataset.name)
 NotImplementedError: No evaluator for dataset: gj_2019_test
 ```
-![图片标题](https://github.com/liuliu408/image/blob/master/notebook/zt1_image4.png)
+![图片标题](https://github.com/liuliu408/image/blob/master/notebook/zt1_image5.png)
 最后可能会报错说缺少gj_2019_test，但其实是没有影响的，主要是因为我们前面生成的json文件中包含了category（类别）这个部分，因为我也尝试过json文件中不生成category，这时候运行测试命令则没有报错。
 通过下图我们也可以看到，报错的位置在task_evaluation.py。但是尽管报错了，我们所需要的检测结果detection.pkl还是会生成的。
 既然这样的话为什么还要生成catogory呢？因为我成生成detection.pkl后总需要可视化的呀，也要看看检测的结果噻。也就是需要运行tools/visualize_results.py，该文件需要json文件中catogary部分的支持。
@@ -390,11 +390,11 @@ index created!
 181/200
 191/200
 ```
-![图片标题](https://github.com/liuliu408/image/blob/master/notebook/zt1_image5.png)
+![图片标题](https://github.com/liuliu408/image/blob/master/notebook/zt1_image6.png)
 
 **指定可视化输出格式为jpg**
 /home/qiang/detectron/detectron/utils/vis.py **参数默认是ext='pdf' 修改为 ext='jpg'**
-![图片标题](https://github.com/liuliu408/image/blob/master/notebook/zt1_image6.png)
+![图片标题](https://github.com/liuliu408/image/blob/master/notebook/zt1_image7.png)
 
 **第2次训练开始时间：2019.03.02 12.19 48**
 
