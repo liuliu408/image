@@ -25,6 +25,7 @@ CUDA_VISIBLE_DEVICES='1' python tools/visualize_results.py \
 CUDA_VISIBLE_DEVICES='1' python tools/visualize_results.py  --dataset gj_2019_test --detections test/detections.pkl  --output-dir test
 ```
 ![图片标题](https://github.com/liuliu408/image/blob/master/notebook/zt3_image1.png)
+
 所在赛程：初赛 - A榜  状态/得分: 0.83610700000
 
 我们退出ssh之后程序继续在后台跑呢？screen帮助你实现梦想！！
@@ -62,6 +63,7 @@ CUDA_VISIBLE_DEVICES='1,2,3' python tools/visualize_results.py \
  
 ```
 ![图片标题](https://github.com/liuliu408/image/blob/master/notebook/zt3_image2.png) 
+
  所在赛程：初赛 - A榜 状态/得分: 0.78247300000
  
   用 retinanet_R-101-FPN_2x.yaml 配置训练出现问题：(梯度训练爆炸!!)
